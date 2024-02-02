@@ -65,11 +65,16 @@ class App extends React.Component {
     }
   }
 
+  deleteOrder = (id) => {
+    const { orders } = this.state;
+    this.setState({orders: orders.filter(order => order.id !== id)});
+  }
+
   render() {
     const { orders, items } = this.state;
     return (
       <div className='wrapper'>
-        <Header orders={orders} />
+        <Header orders={orders} onDelete={this.deleteOrder}/>
         <Items items={items} onAdd={this.addToOrder} />
         <Footer />
       </div>
