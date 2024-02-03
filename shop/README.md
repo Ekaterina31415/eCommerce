@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+react-icons
+можно добавить classNames, contextAPI
+в хеадер можно сразу всё перебрать редьюсом
+Стилизовать вывод суммы в корзине
+Добавить адаптивность
+событие onShowItem поставить на весь item
