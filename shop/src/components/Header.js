@@ -11,7 +11,7 @@ const showOrders = (props) => {
     {orders.map((order) => (
       <Order key={order.id} item={order} onDelete={props.onDelete}/>
     ))}
-    <p className='summa'>Сумма: {new Intl.NumberFormat().format(summa)}$</p>
+    <p className='summa'>Сумма: {summa}$</p>
   </div>)
 }
 const showNothing = () => {
@@ -25,7 +25,7 @@ export default function Header(props) {
   return (
     <header>
       <div>
-        <span className='logo'>House Staff</span>
+        <span className='logo'>Asteroid store</span>
         <ul className='nav'>
           <li>About us</li>
           <li>Contacts</li>

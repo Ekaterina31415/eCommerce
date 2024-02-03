@@ -7,15 +7,19 @@ export class Categories extends Component {
       categories: [
         {
           key: 'all',
-          name: 'Все товары',
+          name: 'Все астероиды',
         },
         {
-          key: 'chairs',
-          name: 'Стулья',
+          key: 'dwarf planet',
+          name: 'Карликовые планеты',
         },
         {
-          key: 'tables',
-          name: 'Столы',
+          key: 'main ring',
+          name: 'Главное кольцо',
+        },
+        {
+          key: 'main asteroid belt',
+          name: 'Главный пояс',
         },
       ]
     }
