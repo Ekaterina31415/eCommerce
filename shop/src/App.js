@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Items from "./components/Items";
+import Categories from "./components/Categories";
 
 class App extends React.Component {
   constructor(props) {
@@ -50,7 +51,9 @@ class App extends React.Component {
           price: '49.99'
         }
       ],
+      currentItems: [],
     };
+    this.state.currentItems = this.state.items;
   }
 
   addToOrder = (item) => {
@@ -70,12 +73,24 @@ class App extends React.Component {
     this.setState({orders: orders.filter(order => order.id !== id)});
   }
 
+  chooseCategory = (category) => {
+    const { items } = this.state;
+    if (category === 'all') {
+      this.setState({currentItems: items});
+      return;
+    }
+    this.setState({
+      currentItems: items.filter((item) => item.category === category)
+    })
+  }
+
   render() {
-    const { orders, items } = this.state;
+    const { orders, currentItems } = this.state;
     return (
       <div className='wrapper'>
         <Header orders={orders} onDelete={this.deleteOrder}/>
-        <Items items={items} onAdd={this.addToOrder} />
+        <Categories chooseCategory={this.chooseCategory}/>
+        <Items items={currentItems} onAdd={this.addToOrder} />
         <Footer />
       </div>
     );
