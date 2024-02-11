@@ -108,7 +108,7 @@ class App extends React.Component {
         <Categories chooseCategory={this.chooseCategory}/>
         <Items items={currentItems} onAdd={this.addToOrder} onShowItem={this.onShowItem}/>
         {this.state.showFullItem && <ShowFullItem item={fullItem} onAdd={this.addToOrder} onShowItem={this.onShowItem}/>}
-        <Moon />
+        {/* <Moon /> */}
         <Footer />
       </div>
     );
